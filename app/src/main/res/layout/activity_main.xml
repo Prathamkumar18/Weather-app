@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/customback">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv1"
+            android:backgroundTint="@color/teal_200"
+            android:text="ENTER CITY NAME"
+            android:fontFamily="cursive"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="100dp"
+            android:textStyle="bold|italic"
+            android:textColor="#C0CA33"
+            />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/et1"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        android:contentDescription="Clear"
+        android:outlineAmbientShadowColor="@color/white"
+        android:src="@drawable/clear"
+        android:layout_margin="16dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClickClear"/>
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:textSize="30sp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et1"
+        android:text="SEARCH 🔍"
+        android:background="@drawable/custombutton"
+        android:id="@+id/searchButton"
+        android:layout_marginTop="50dp"
+        android:onClick="onClickSearch"
+        />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchButton"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/resulttv"
+            android:textSize="40sp"
+            android:fontFamily="cursive"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            app:flow_horizontalAlign="center"
+            android:textAlignment="center"
+            />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
